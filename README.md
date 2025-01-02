@@ -107,7 +107,7 @@ Newchats/
      ```bash
      npm run dev
      ```
-   - 브라우저에서 `http://localhost:3000`으로 접속하여 서비스 확인
+   - 브라우저에서 `http://localhost:1234`으로 접속하여 서비스 확인
 
 ---
 
