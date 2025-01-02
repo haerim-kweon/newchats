@@ -60,7 +60,11 @@ Newchats/
 
 ## 배포 링크 (있는 경우)
 
+1. 백엔드 api 서버 주소
 
+    https://backend-gwangju2-newchats.fly.dev
+
+2. 웹페이지 주소
 
 ---
 
