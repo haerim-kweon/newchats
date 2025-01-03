@@ -1,39 +1,81 @@
-# 실시간 뉴스 검색 기반 챗봇 서비스
+<a href="https://ssafy-2024-ai.vercel.app/" target="_blank">
+   <img src="./img/example.png" width="100%"> 
+</a>
 
-## Newchats
 
-> **네이버 뉴스 검색 API**를 활용하여 최신 뉴스를 수집하고, RAG(Relevance-Augmented Generation) 파이프라인을 통해 답변 정확도를 높인 **실시간 뉴스 기반 챗봇** 프로젝트입니다.
+<br/>
+<br/>
 
----
+# 1. Project Overview (프로젝트 개요)
+- 프로젝트 이름: NewChats
+- 프로젝트 설명: AI를 활용한 뉴스 요약 챗봇
+- 개발 기간 : 2024.12.30 - 2025.01.02
+- 프로젝트 소개 
+  - 사용자의 질문에 대해 네이버 및 구글의 최신 정보를 검색하고, 가장 관련성 높은 정보를 기반으로 AI가 답변을 생성
+  - 검색과 AI 생성 모델을 결합한 RAG 기반 어시스턴트
 
-### 프로젝트 구성원
-- **권해림**
-- **김서린**
-- **신현학**
-- **이두호**
 
----
+<br/>
+<br/>
 
-## 프로젝트 소개
+# 2. Team Members (팀원 및 팀 소개)
+| 신현학 | 권해림 | 김서린 | 이두호 |
+|:------:|:------:|:------:|:------:|
+| 팀장 | 팀원 | 팀원 | 팀원 |
+| [GitHub](https://github.com/Carpediem324) | [GitHub](https://github.com/haerim-kweon) | [GitHub](https://github.com/Kim0330) | [GitHub](https://github.com/dlencie) |
 
-**Newchats**는 다음과 같은 흐름으로 동작합니다:
+<br/>
+<br/>
 
-1. **실시간 뉴스 수집**  
-   네이버 뉴스 검색 API를 활용해 원하는 키워드의 최신 뉴스 기사를 수집합니다.
-   
-   네이버 뉴스 키워드 검색 실패 시 구글 검색을 통해 뉴스 기사를 수집합니다.
+# 3. Key Features (주요 기능)
+- **챗봇**:
+  - 사용자가 입력한 질문을 분석하고, RAG 모델이 최신 뉴스를 참고하여 실제 상황에 맞는 답변을 제공합니다.
+- **실시간 검색**:
+  - 사용자가 입력한 질문을 분석하고, RAG 모델이 최신 뉴스를 참고하여 실제 상황에 맞는 답변을 제공합니다.
+- **데이터 전처리 및 RAG 파이프라인** :
+  - 수집된 뉴스 기사 데이터를 RAG 모델에 적용하기 위한 형태로 전처리하고, 파인튜닝 또는 모델 구성에 활용합니다.
+ 
+  
+  
 
-2. **데이터 전처리 및 RAG 파이프라인**  
-   수집된 뉴스 기사 데이터를 RAG 모델에 적용하기 위한 형태로 전처리하고, 파인튜닝 또는 모델 구성에 활용합니다.
+<br/>
+<br/>
 
-3. **챗봇 서비스**  
-   사용자가 입력한 질문을 분석하고, RAG 모델이 최신 뉴스를 참고하여 실제 상황에 맞는 답변을 제공합니다.
 
----
+# 4. Technology Stack (기술 스택)
+## 4.1 Language
+|  |  |  |
+|-----------------|-----------------|-----------------|
+| Backend | Python  |  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"/>| 
+| Frontend | Javascript    |    <img src="https://img.shields.io/badge/Javascript-EE4C2C?style=for-the-badge&logo=Javascript&logoColor=white"/>|
 
-## 디렉토리 구조
+<br/>
+<br/>
 
-```bash
+## 4.2 API
+|  |  |
+|-----------------|-----------------|
+| OpenAI Assistant    |     |
+| Naver OpenAPI   |  - 사용자 메세지에서 추출된 키워드로 실시간 뉴스 검색   |
+| Google SerpAPI    | - 검색 엔진에서 웹 데이터 수집 <br/> - 사용자 질문 기반으로 질의를 재구성하여 API 호출  |
+| Upstage API    |  - AI 모델 호출 및 임베딩 생성  <br/> - 검색어 추출, 질의 확장, 벡터화 등|
+
+<br/>
+<br/>
+
+## 4.3 Release
+|  |  |  |  |
+|-----------------|-----------------|-----------------|-----------------|
+| Backend | Fly.io    |  <img src="https://img.shields.io/badge/flydotio-24175B?style=for-the-badge&logo=flydotio&logoColor=white"/> | https://backend-gwangju2-newchats.fly.dev |
+| Frontend | vercel  |  <img src="https://img.shields.io/badge/vercel-cccccc?style=for-the-badge&logo=vercel&logoColor=white"/> | https://ssafy-2024-ai.vercel.app/ |
+
+
+<br/>
+<br/>
+
+
+## 5. 디렉토리 구조
+```
 Newchats/
 ├── backend/
 │   └── ...      # API 서버 및 RAG 관련 모델 코드
@@ -43,35 +85,10 @@ Newchats/
     ├── 발표자료
     ├── 보고서
     └── 실행동영상
+
 ```
 
----
-
-## 주요 기능
-
-- **실시간 뉴스 검색**  
-  원하는 키워드로 최신 뉴스를 검색하고, 그 결과를 챗봇에게 전달
-
-- **RAG(Relevance-Augmented Generation) 파이프라인**  
-  뉴스 기사와 같은 최신 정보를 모델이 참조하도록 구성하여, 답변의 정확도와 신뢰도 향상
-
-- **유연한 확장성**  
-  다른 뉴스 소스나 문서, 데이터베이스 연동 등을 간편하게 추가하고 확장 가능
-
----
-
-## 배포 링크
-
-1. 백엔드 api 서버 주소
-
-    https://backend-gwangju2-newchats.fly.dev
-
-2. 웹페이지 주소
-
-    https://localhost:1234
----
-
-## 로컬 실행 방법
+## 6. 로컬 실행 방법
 
 아래는 로컬 개발 환경에서 프로젝트를 실행하는 단계별 가이드입니다.
 
@@ -113,10 +130,3 @@ Newchats/
    - 브라우저에서 `http://localhost:1234`으로 접속하여 서비스 확인
 
 ---
-
-
-## 라이선스
-
-
----
-
