@@ -1,5 +1,5 @@
 <a href="https://ssafy-2024-ai.vercel.app/" target="_blank">
-   <img src="./img/example.png" width="100%"> 
+   <img src="example.png" width="100%"> 
 </a>
 
 
