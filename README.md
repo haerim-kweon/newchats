@@ -1,5 +1,5 @@
 <a href="https://ssafy-2024-ai.vercel.app/" target="_blank">
-   <img src="example.png" width="100%"> 
+   <img src="docs/Newchats_example.png" width="100%"> 
 </a>
 
 
@@ -55,7 +55,7 @@
 ## 4.2 API
 |  |  |
 |-----------------|-----------------|
-| OpenAI Assistant    |     |
+| OpenAI Assistant    | - 사용자와 상호작용을 통해 추가적인 정보 제공    |
 | Naver OpenAPI   |  - 사용자 메세지에서 추출된 키워드로 실시간 뉴스 검색   |
 | Google SerpAPI    | - 검색 엔진에서 웹 데이터 수집 <br/> - 사용자 질문 기반으로 질의를 재구성하여 API 호출  |
 | Upstage API    |  - AI 모델 호출 및 임베딩 생성  <br/> - 검색어 추출, 질의 확장, 벡터화 등|
